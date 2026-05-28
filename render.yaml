@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: super-pizza-api
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+
+  - type: static
+    name: super-pizza-client
+    rootDir: client
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
